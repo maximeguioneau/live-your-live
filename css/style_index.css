@@ -1,0 +1,550 @@
+@font-face {
+font-family: "futura";
+src: url("../assets/font/Futura (Light).ttf");
+font-style: normal;
+}
+
+@font-face {
+font-family: "futurabold";
+src: url("../assets/font/futurabold.ttf");
+font-style: normal;
+}
+
+@font-face {
+font-family: "futuramedium";
+src: url("../assets/font/futuramedium.ttf");
+font-style: normal;
+}
+
+*{
+font-family: "futura";
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    height: 100%;
+    font-family: "futura";
+    letter-spacing: 3px;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+header {
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 10;
+}
+.slide {
+    position: relative;
+    padding: 10%;
+    width: 100%;
+    transform-style: inherit;
+    z-index: 0;
+}
+#slide1{
+    padding-top:6%;
+    height:400px;
+}
+#slide2 {
+    position: relative;
+    padding: 10%;
+    height: 250px;
+    width: 100%;
+    transform-style: inherit;
+}
+.slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.sousbloc {
+    width: 50%;
+    padding: 5%;
+    height: 50%;
+    border: solid;
+}
+.slide,
+.slide:before {
+    background: 50% 50% / cover;
+}
+
+#home {
+    /*background-image: url("home4.jpg");
+    background-attachment: fixed;
+    -webkit-filter: blur(5px);
+    filter: blur(5px); */
+    background-color: black;
+    z-index: -100;
+    position: relative;
+    height: 65%;
+}
+#home video{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-filter: blur(6px);
+}
+
+#slide1:before {
+    background-color: #171717;
+    background-position: center;
+    z-index: -1;
+}
+
+#slide1{
+    height: 60%;
+}
+
+#slide2 {
+    background-color: #1e1d1d;
+    background-attachment: fixed; 
+}
+#slide3:before {
+    background-image: url("../img/image3.jpg");
+    z-index: -1;
+}
+.titre {
+    width: 50%;
+    padding: 5%;
+    height: 45%;
+    margin-left: 5%;
+    margin-top: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+#description {
+    font-size: 100%;
+    color: white;
+    text-align: center;
+    font-family: futura;
+    text-align: justify;
+    height: 100%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo {
+    text-align: left;
+    margin-left: 15%;
+    color: white;
+    margin-top: 15px;
+    height: 70%;
+}
+#logo:hover {
+
+}
+.menu,
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 45px;
+    text-align: center;
+}
+.menu {
+    font-family: "futuramedium";
+    font-size: 12px;
+    margin-top: 10px;
+}
+.menu a {
+    display: block;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+    width: 130px;
+}
+.menu li {
+    float: left;
+}
+#placement {
+    margin-right: 10%;
+    float: right;
+    overflow: hidden;
+}
+.sociaux {
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 40px;
+}
+
+.sociaux:hover{
+
+}
+
+.entreSceneAccueil {
+    color: black;
+    font-size: 11px;
+    text-align: center;
+    padding:0 6px;
+    width: 25%;
+    height: 34px;
+    margin-left: 37%;
+    margin-top:250px;
+    line-height: 38px;
+    background-color: rgba(255, 255, 86, 0.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.entreSceneAccueil:hover {
+    background-color: rgba(255, 255, 86, 1);
+}
+
+.blocartiste {
+    width: 20%;
+    height: 65%;
+    color: white;
+    display: inline-block;
+    margin-top: 180px;
+    margin-left: 5%;
+    position: relative;
+    background-image: url(../img/photoartiste.png);
+}
+.artistename {
+    width: 100%;
+    height: 30%;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    background-color: #1e1d1d;
+    border-top: solid;
+    border-top-color: #c20d4e;
+}
+.blocartiste:hover > .artistename {
+    border-top-color: #4be03f;
+}
+.blocartiste:hover {
+}
+.hovermenu:hover {
+
+}
+a {
+    text-decoration: none;
+}
+.whoisit {
+    height:20px;
+    text-align: center;
+    font-size: 15px;
+    /*margin-top:15px;*/
+    margin-top:6%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity:0.8;
+    font-weight: 700;
+    font-family:'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+.whenisit {
+    height:10px;
+    text-align: center;
+    font-size: 9px;
+    line-height:12px;
+    font-family: futura;
+    margin-top:5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding:0 8px;
+    opacity:0.6;
+}
+.allconcert {
+    color: black;
+    font-size: 11px;
+    text-align: center;
+    padding:0 6px;
+    width: 19.5%;
+    height: 34px;
+    margin-left: 30.4%;
+    margin-top: 2%;
+    line-height: 38px;
+    background-color: rgba(255, 255, 86, 0.7);
+    letter-spacing: 2px;
+    border-radius: 2px;
+}
+.allconcert:hover {
+    background-color: rgba(255, 255, 86, 1);
+}
+.megatest {
+    width: 17%;
+    height: 25%;
+    position: absolute;
+    margin-left: 4%;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 6px;
+    line-height: 40px;
+}
+.calendar {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    width: 30%;
+    height: 48px;
+    margin-left: 25%;
+    line-height: 55px;
+    color: white;
+    opacity:0.9;
+    border: 2px solid white;
+    margin-top: -5%;
+}
+.date {
+    width: 20%;
+    height: 100%;
+    color: white;
+    display: inline-block;
+    margin-left: 5%;
+    position: relative;
+    text-transform: uppercase;
+}
+.month {
+    position: absolute;
+    font-size: 27px;
+    color: #ffff56;
+    margin: 10px;
+    height: 20%;
+    font-family: futurabold;
+    opacity: 0.8;
+    line-height: 70px;
+    margin-top: 0;
+}
+
+.day {
+    position: absolute;
+    height: 75%;
+    margin-top: 25%;
+    margin-left: 10px;
+    line-height: 20px;
+    opacity:0.7;
+}
+p a {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    line-height: 9px;
+    letter-spacing: 2px;
+}
+
+.bolddate {
+    font-weight: 700;
+    font-family:'Roboto', sans-serif;
+    font-size:12px;
+    letter-spacing: 0;
+}
+
+.comein{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    margin-top: 23%;
+    margin-left: 30%;
+}
+
+
+.entreenscene{
+    margin-left: 30%;
+    margin-top: 20%;
+}
+
+.ensceneartiste{
+    width: 50%;
+    height: 55%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.loremipsum{
+    position:absolute;
+    width: 320px;
+    color:white;
+    margin-top:170px;
+    left: 50%;
+    margin-left:-160px;
+    text-align: center;
+    font-size:11px;
+    line-height: 15px;
+
+    
+}
+
+.footer{
+    width: 100%;
+    height: 350px;
+    border-top: solid;
+    border-top-color: #ffff56;
+    background-color: white;
+}
+
+.about{
+    margin-left:6%;
+    height:50%;
+}
+
+.aboutus{
+    width: 20%;
+    height: 50%;
+    margin-top: 40px;
+    margin-left: 9%;
+    display: inline-block;
+}
+
+.apropos{
+    height: 25%;
+    font-size: 11px;
+}
+
+.footermenu{
+    height: 80%;
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.flechebas{
+    position:absolute;
+    height:20px;
+    width:20px;
+    left: 50%;
+    margin-left:-20px;
+    margin-top: 13%;
+
+}
+
+.follow{
+    margin-left: 15%;
+    margin-top: 50px;
+    width: 80%;
+    height: 15%;
+}
+
+.followus{
+    font-family: futurabold;
+    font-size: 30px;
+    font-weight: 1900;
+    line-height: 40px;
+    margin-right:5px;
+}
+
+.socialfooter{
+    float: left;
+    position: relative;
+}
+
+.droit {
+    float:left;
+    position: relative;
+    font-size: 12px;
+    margin-left:12%;
+}
+
+.logoaccueil{
+    position:absolute;
+    height: 230px;
+    overflow: hidden;
+    top:0;
+    left: 50%;
+    margin-left:-115px;
+    opacity:0.9;
+}
+
+.footerlien {
+    text-decoration: none;
+    color: black;
+}
+
+.underline{
+    border-bottom: solid;
+    padding-bottom: 10px;
+}
+
+
+
+/* Media queries */
+
+@media all and (max-width:925px) {
+
+    .allconcert {
+        padding-top:12px;
+        font-size: 9px;
+        height:38px;
+        line-height:14px;
+    }
+    .entreSceneAccueil{
+        padding-top:12px;
+        font-size: 9px;
+        height:38px;
+        line-height:14px;
+        z-index: 100;
+    }
+
+    #slide2 {
+        height: 300px;
+    }
+
+    .apropos:first-child{
+        height: 25%;
+        font-size: 11px;
+        margin-bottom:10px;
+    }
+
+}
+
+@media all and (min-width:925px) and (max-width:1050px) {
+  
+    .apropos:first-child{
+        height: 25%;
+        font-size: 11px;
+        margin-bottom:10px;
+    }
+
+}
+
+@media all and (min-width:1050px) and (max-width:1155px) {
+
+    .allconcert {
+        font-size: 9px;
+    }
+
+    .apropos:first-child{
+        height: 25%;
+        font-size: 11px;
+        margin-bottom:10px;
+    }
+
+}

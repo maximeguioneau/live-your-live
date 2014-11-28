@@ -1,0 +1,215 @@
+@font-face {
+	font-family: "futura";
+	src: url("font/Futura_Light.ttf");
+}
+
+@font-face {
+	font-family: "Futura-MediumItalic";
+	src: url("assets/font/Futura-MediumItalic.ttf");
+}
+
+body{
+	background-color: black;
+}
+
+#videoContainer{
+	position:relative;
+	min-height: 100%;
+	min-width: 100%;
+	height: auto;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom:40px;
+}
+
+#video1, #video2, #video3{
+	cursor:pointer;
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+.videoHidden{
+	display:none;
+    width:100%;
+    height:100%;
+    z-index:0;
+}
+
+.videoOverlay{  
+    width:100%;
+    height:100%;
+    z-index:1000;
+}
+
+.controlsFadeout{
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: visibility 1.5s, opacity 1.5s;
+     -moz-transition: visibility 1.5s, opacity 1.5s;
+      -ms-transition: visibility 1.5s, opacity 1.5s;
+       -o-transition: visibility 1.5s, opacity 1.5s;
+          transition: visibility 1.5s, opacity 1.5s;
+
+  -webkit-transition-delay: 2s;
+     -moz-transition-delay: 2s;
+      -ms-transition-delay: 2s;
+       -o-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+.controlsUserInactive{
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: visibility 1.5s, opacity 1.5s;
+     -moz-transition: visibility 1.5s, opacity 1.5s;
+      -ms-transition: visibility 1.5s, opacity 1.5s;
+       -o-transition: visibility 1.5s, opacity 1.5s;
+          transition: visibility 1.5s, opacity 1.5s;
+
+  -webkit-transition-delay: 2s;
+     -moz-transition-delay: 2s;
+      -ms-transition-delay: 2s;
+       -o-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+video::-webkit-media-controls { display:none !important; }
+
+.controls{
+	font-family: "futura";
+  	position: absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	color:white;
+	font-size: .8em;
+	width:100%;
+	height:14px;
+	padding:18px 0px;
+	background-color: rgba(42,41,41,0.7);
+	z-index: 2147483647;
+}
+
+#playpause{
+	height: 27px;
+	width: 27px;
+	margin-left:290px;
+	position: absolute;
+	margin-top: -17px;
+	
+}
+#currentTime {
+	position: absolute;
+	margin-top: -9px;
+	margin-left: 340px;
+	cursor:pointer;
+}
+#totalTime{
+	position: absolute;
+	margin-left: 420px;
+	margin-top: -9px;
+}
+
+#mute{
+	height: 27px;
+	width: 27px;
+	margin-left: 500px;
+	position: absolute;
+	margin-top: -17px;
+}
+#volumeBar{
+	position: absolute;
+	width: 135px;
+	margin-top: -11px;
+	margin-left: 538px;
+}
+#fullscreen{
+	height: 27px;
+	width: 27px;
+	margin-left: 700px;
+	position: absolute;
+	margin-top: -17px;
+
+}
+
+#progressBar{
+	cursor:pointer;
+	bottom:42px;
+	left:0;
+	position:absolute;
+	width:100%;
+	display:block;
+	background-color:white;
+	height:8px;
+	z-index:2147483647;
+}
+
+#progressBar span{
+	top:0;
+	left:0;
+	height:8px;
+	position:absolute;
+	background-color:#d30d54;
+	display:block;
+}
+
+#progressBar .progress{
+	z-index:1003;
+}
+
+#progressBar .buffer{
+	top:0;
+	left:0;
+	height:8px;
+	position:absolute;
+	background-color:#2a2929;
+	display:block;
+	opacity:.5;
+	z-index:1002;
+}
+
+#button {
+	cursor:pointer;
+	z-index:1000;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-80.5px;
+	margin-left:-60px;
+	height:120px;
+	width:120px;
+	background-color:#d0ce54;
+}
+
+#button span{
+	position:absolute;
+	left:50%;
+	margin-left:-29.5px;
+	font-family: "Futura-MediumItalic";
+	font-size:22px;
+	color:black;
+	line-height:120px;
+}
+
+.cameras{
+	z-index: 2147483647;
+	position:absolute;
+	top:10%;
+	right:8%;
+}
+
+.playerButton{
+	cursor:pointer;
+	width:25px;
+}
+
+.camButton{
+	cursor:pointer;
+	width:40px;
+	height:50px;
+}

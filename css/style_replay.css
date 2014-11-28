@@ -1,0 +1,453 @@
+@font-face {
+font-family: "futura";
+src: url("../assets/font/Futura (Light).ttf");
+font-style: normal;
+}
+
+@font-face {
+font-family: "futurabold";
+src: url("../assets/font/futurabold.ttf");
+font-style: normal;
+}
+
+@font-face {
+font-family: "futuramedium";
+src: url("../assets/font/futuramedium.ttf");
+font-style: normal;
+}
+
+*{
+font-family: "futura";
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	height: 100%;
+    font-family: "futura";
+    letter-spacing: 3px;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+header {
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 10;
+}
+.slide {
+    position: relative;
+    padding: 10%;
+    height: 200%;
+    width: 100%;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    transform-style: inherit;
+    z-index: -1;
+}
+
+.slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.slide,
+.slide:before {
+    background: 50% 50% / cover;
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
+#home {
+    /*background-image: url("home4.jpg");
+    background-attachment: fixed;
+    -webkit-filter: blur(5px);
+    filter: blur(5px); */
+    background-color: black;
+    z-index: 0;
+    position: relative;
+}
+
+#slide1:before {
+    background-color: #171717;
+    background-position: center;
+    z-index: -1;
+}
+
+.menu,
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 45px;
+    text-align: center;
+}
+.menu {
+    font-family: "futuramedium";
+    font-size: 12px;
+    margin-top: 10px;
+}
+.menu a {
+    display: block;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+    width: 130px;
+}
+.menu li {
+    float: left;
+}
+#placement {
+    margin-right: 10%;
+    float: right;
+    overflow: hidden;
+}
+.sociaux {
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 40px;
+}
+
+.sociaux:hover{
+
+}
+
+a {
+    text-decoration: none;
+}
+
+p a {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    line-height: 9px;
+    letter-spacing: 2px;
+}
+.footer{
+    width: 100%;
+    height: 40%;
+    border-top: solid;
+    border-top-color: #ffff56;
+    background-color: white;
+}
+
+.aboutus{
+    width: 20%;
+    height: 50%;
+    margin-top: 2%;
+    margin-left: 10%;
+    display: inline-block;
+}
+
+.apropos{
+    height: 25%;
+    font-size: 11px;
+}
+
+.footermenu{
+    height: 80%;
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.follow{
+    margin-left: 10%;
+    margin-top: 2%;
+    width: 80%;
+    height: 15%;
+}
+
+.followus{
+    font-family: futurabold;
+    font-size: 30px;
+    font-weight: 1900;
+    line-height: 40px;
+}
+
+.socialfooter{
+    width: 25%;
+    float: left;
+    position: relative;
+}
+
+.droit {
+    float:left;
+    position: relative;
+    font-size: 12px;
+    margin-left:12%;
+}
+
+.footerlien {
+    text-decoration: none;
+    color: black;
+}
+#logo {
+    text-align: left;
+    margin-left: 10%;
+    color: white;
+    margin-top: 15px;
+    height: 70%;
+    width: 4%;
+}
+.container{
+    color: white;
+    width: 78%;
+    height: 25%;
+}
+
+.textchoose{
+    margin-top: 5%;
+    height: 15%;
+    width: 30%;
+    text-align: center;
+    margin-left: 35%;
+    font-size: 20px;
+    line-height: 60px;
+    border: solid;
+    border-width: 2px;
+}
+
+.commentfaire{
+    width: 30%;
+    margin-left: 35%;
+    height: 30%;
+    margin-top: 5%;
+    text-align: center;
+    /*text-transform: uppercase;*/
+    font-size: 12px;
+    line-height: 18px;
+    opacity:0.8;
+}
+
+#fluxtwitter{
+    width: 25%;
+    float: left;
+    margin-left: 0;
+    height: 40%;
+}
+.player{
+    width: 70%;
+    height: 40%;
+    margin-left: -10%;
+    color: white;
+    border-bottom: solid;
+    border-top: solid;
+    border-top-width: 1px; 
+    border-bottom-width: 1px;
+    border-top-color: white;
+    border-bottom-color: white;
+    float: left;
+    margin-right: 50px;
+}
+
+.attenteplayer{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 30%;
+    height: 20%;
+}
+
+
+.sousplayer{
+    color: white;
+    margin-left: -10%;
+    height: 43%;
+    width: 99%;
+    z-index: -100000;
+}
+
+.informations{
+    height: 55%;
+    width: 20%;
+    float: left;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+#backwhite{
+    background-color: white;
+}
+
+#backpink{
+    background-color: #d30d54;
+}
+
+#backgrey{
+    background-color: #2a2929;
+}
+
+.lieu{
+    height: 35%;
+    border-bottom: solid;
+    color: black;
+    border-width: 1px;
+}
+
+.dateconcert{
+    height: 20%;
+}
+
+.biographie{
+    height: 45%;
+}
+
+.detailslieu{
+    height: 60%;
+    width: 70%;
+    font-size: 35px;
+    line-height: 35px;
+    margin-top: 20px;
+    font-family: futuramedium;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.detailslieu2{
+    height: 30%;
+    line-height: 40px;
+    font-size: 11px;
+    margin-left: 10%;
+}
+
+.quelledate{
+    color: black;
+    font-family: futurabold;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+    height: 75%;
+    border-bottom: solid;
+    border-width: 1px;
+}
+
+.biographie{
+    color: blak;
+}
+
+.aproposdelui{
+    height: 10%;
+    color: black;
+    font-size: 9px;
+    text-align: center;
+    margin-top: -2%;
+    padding-top: 10px;
+}
+
+.bioartiste{
+    height: 70%;
+    color: black;
+    font-size: 9px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-top: 5px;
+    line-height: 15px;
+}
+
+.apiyoutube{
+    height: 25%;
+    padding-left: 30px;
+    font-family: futuramedium;
+    padding-top: 20px;
+    font-size: 30px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-bottom-color: black;
+}
+
+.lesmusique{
+    height: 25%;
+    font-family: futuramedium;
+    font-size: 30px;
+    width: 30%;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.setlist{
+    height: 70%;
+    bottom: 0;
+    margin-left: 20%;
+}
+
+.track{
+    height: 10%;
+    font-size: 12px;
+}
+
+.enconstruction{
+    color: white;
+    width: 50%;
+    font-size: 50px;
+    height: 10%;
+    margin-left: 10%;
+    margin-top: 20%;
+}
+
+.samestyle{
+    height: 20%;
+    margin-top: 15%;
+}
+
+.whoisit {
+    height:20px;
+    text-align: center;
+    font-size: 15px;
+    /*margin-top:15px;*/
+    margin-top:6%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity:0.8;
+    font-weight: 700;
+    font-family:'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+.whenisit {
+    height:10px;
+    text-align: center;
+    font-size: 9px;
+    line-height:12px;
+    font-family: futura;
+    margin-top:5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding:0 8px;
+    opacity:0.6;
+}

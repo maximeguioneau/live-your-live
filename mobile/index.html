@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Projet concert - mobile</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div id="mobile">
+
+        <img id="logo" src="img/logo.png">
+            
+        <p class="message">CHOISIS TA CAMERA</p>
+
+        <div class="bloccameras">
+           <div class="cam" id="cam1"><img src="img/cam1.png"></div>  
+
+           <div class="cam" id="cam2"><img src="img/cam2.png"></div>  
+
+           <div class="cam" id="cam3"><img src="img/cam3.png"></div>
+        </div>
+
+        <p class="separateur"></p>
+
+        <div class="blocboutons">
+           <img class="button" id="playpause" src="img/play.png">
+
+           <img class="button" id="mute" src="img/mute.png">
+
+            <input type="range" id="volumeBar" min="0" max ="100" value ="50"/>  
+
+           <img class="button" id="fullscreen" src="img/fullscreen.png">
+        </div>
+
+        <p class="separateur2"></p>
+
+    </div>
+
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+	<script type="text/javascript" src="js/model.js"></script>
+	<script type="text/javascript" src="js/UI.js"></script>
+	<script type="text/javascript" src="js/remoteController.js"></script>
+	
+</body>
+</html>
